@@ -27,20 +27,20 @@ rp.rp_GenReset()
 rp.rp_AcqReset()
 
 print("Gen_start")
-for i in range(0,20):
-    rp.rp_GenWaveform(channel, waveform)
-    rp.rp_GenFreqDirect(channel, freq)
-    rp.rp_GenAmp(channel, ampl)
+
+rp.rp_GenWaveform(channel, waveform)
+rp.rp_GenFreqDirect(channel, freq)
+rp.rp_GenAmp(channel, ampl)
     
-    rp.rp_GenWaveform(channel2, waveform)
-    rp.rp_GenFreqDirect(channel2, freq)
-    rp.rp_GenAmp(channel2, ampl)
+rp.rp_GenWaveform(channel2, waveform)
+rp.rp_GenFreqDirect(channel2, freq)
+rp.rp_GenAmp(channel2, ampl)
     
-    rp.rp_GenTriggerSource(channel, rp.RP_GEN_TRIG_SRC_INTERNAL)
+rp.rp_GenTriggerSource(channel, rp.RP_GEN_TRIG_SRC_INTERNAL)
     
-    rp.rp_GenOutEnableSync(True)
-    rp.rp_GenSynchronise()
-    
+rp.rp_GenOutEnableSync(True)
+rp.rp_GenSynchronise()
+for i in range(0,20): 
     # Set Decimation
     rp.rp_AcqSetDecimation(dec)
     
