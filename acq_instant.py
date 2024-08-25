@@ -49,7 +49,7 @@ for i in range(0,20):
     rp.rp_AcqSetTriggerDelay(trig_dly)
     
     # Start Acquisition
-    print("Acq_start")
+    # print("Acq_start")
     rp.rp_AcqStart()
     
     # time.sleep(0.1)
@@ -86,18 +86,18 @@ for i in range(0,20):
         data_V[i] = fbuff[i]
         data_raw[i] = ibuff[i]
     
-    figure, axis = plt.subplots(1, 2) 
-    signal_f = np.fft.fft(data_raw)
+    # figure, axis = plt.subplots(1, 2) 
+    # signal_f = np.fft.fft(data_raw)
     
-    axis[0].plot(X/1e6, data_V) 
-    axis[0].set_title("Volts")
+    # axis[0].plot(X/1e6, data_V) 
+    # axis[0].set_title("Volts")
     
-    axis[1].plot(X/1e6, abs(signal_f)) 
-    axis[1].set_title("RAW") 
+    # axis[1].plot(X/1e6, abs(signal_f)) 
+    # axis[1].set_title("RAW") 
     
-    plt.show()
+    # plt.show()
     
     print(data_raw[0:20])
     # Release resources
-    rp.rp_Release()
+rp.rp_Release()
 
