@@ -96,6 +96,7 @@ axis[1].set_title("RAW")
 
 plt.show()
 
+print(data_raw[0:20])
 # Release resources
 rp.rp_Release()
 
